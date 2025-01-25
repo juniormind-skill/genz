@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>SUPRIYA AND RIDHAAN</title>
+  <title>WELCOME TO GEN Z WORLD</title>
   <style>
     /* Basic Reset */
     * {
@@ -26,8 +26,8 @@
       flex-direction: column;
     }
 
-    /* Logo Styling */
-    .logo {
+    /* Slogan Styling */
+    .slogan {
       font-size: 3em;
       font-weight: bold;
       text-align: center;
@@ -38,13 +38,14 @@
       text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8); /* Adding a shadow for contrast */
     }
 
-    .logo span {
-      display: inline-block;
-      opacity: 0.8;
-      animation: colorChange 4s ease-in-out infinite;
+    .sub-slogan {
+      font-size: 1.5em;
+      font-weight: normal;
+      color: #FFFFFF;
+      margin-top: 10px;
     }
 
-    /* Animation for Logo */
+    /* Animation for Slogan */
     @keyframes logoAnimation {
       0%, 100% {
         transform: scale(1);
@@ -54,16 +55,19 @@
       }
     }
 
-    @keyframes colorChange {
-      0% {
-        color: #FFFFFF; /* Set text color to white */
-      }
-      50% {
-        color: #FFFFFF; /* Set text color to white */
-      }
-      100% {
-        color: #FFFFFF; /* Set text color to white */
-      }
+    /* Quote Section Styling */
+    .quotes {
+      font-size: 1.2em;
+      font-style: italic;
+      color: #FFFFFF;
+      margin-top: 30px;
+      text-align: center;
+      padding: 0 20px;
+      animation: fadeIn 5s ease-in-out infinite;
+    }
+
+    .quotes p {
+      margin: 10px 0;
     }
 
     /* Button Styling */
@@ -87,9 +91,15 @@
 
     /* Mobile Responsiveness */
     @media (max-width: 768px) {
-      .logo {
+      .slogan {
         font-size: 2em;
         padding: 10px;
+      }
+      .sub-slogan {
+        font-size: 1.2em;
+      }
+      .quotes {
+        font-size: 1em;
       }
       .button {
         font-size: 1.2em;
@@ -97,13 +107,39 @@
       }
     }
 
+    /* Animation for Quotes */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+
   </style>
 </head>
 <body>
 
-  <!-- Logo Section -->
-  <div class="logo">
-    <span>SUPRIYA</span> <br> MOTHER OF GENZ <br> <span>RIDHAAN</span>
+  <!-- Slogan Section -->
+  <div class="slogan">
+    GEN Z WORLD
+  </div>
+
+  <!-- Sub Slogan Section -->
+  <div class="sub-slogan">
+    The Future Begins Now
+  </div>
+
+  <!-- Quotes Section -->
+  <div class="quotes">
+    <p>"Your time is now, make it count."</p>
+    <p>"The best way to predict the future is to create it." – Abraham Lincoln</p>
+    <p>"Don't wait for opportunity. Create it."</p>
+    <p>"The world is yours for the taking."</p>
   </div>
 
   <!-- Button Section -->
