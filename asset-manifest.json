@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.da438a05.css",
-    "main.js": "/static/js/main.d868c053.js",
-    "index.html": "/index.html",
-    "main.da438a05.css.map": "/static/css/main.da438a05.css.map",
-    "main.d868c053.js.map": "/static/js/main.d868c053.js.map"
+    "main.css": "/genz/static/css/main.a394c8ca.css",
+    "main.js": "/genz/static/js/main.f1d92e4f.js",
+    "index.html": "/genz/index.html",
+    "main.a394c8ca.css.map": "/genz/static/css/main.a394c8ca.css.map",
+    "main.f1d92e4f.js.map": "/genz/static/js/main.f1d92e4f.js.map"
   },
   "entrypoints": [
-    "static/css/main.da438a05.css",
-    "static/js/main.d868c053.js"
+    "static/css/main.a394c8ca.css",
+    "static/js/main.f1d92e4f.js"
   ]
 }
