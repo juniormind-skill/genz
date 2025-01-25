@@ -1,85 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GENZMIND.COM</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(45deg, #ff6b6b, #ff9b6b, #ffd56b, #6bff6b, #6bffff, #6b6bff, #ff6bff);
-            background-size: 400% 400%;
-            animation: gradientBackground 10s ease infinite;
-            font-family: Arial, sans-serif;
-            overflow: hidden;
-        }
-
-        @keyframes gradientBackground {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-
-        h1 {
-            font-size: 6rem;
-            background: linear-gradient(90deg, #ff6b6b, #ff9b6b, #ffd56b, #6bff6b, #6bffff, #6b6bff, #ff6bff);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            text-shadow: 4px 4px 20px rgba(0, 0, 0, 0.7);
-            animation: textGlow 3s infinite alternate;
-        }
-
-        @keyframes textGlow {
-            0% {
-                text-shadow: 0 0 20px #ff6b6b, 0 0 30px #ff6b6b, 0 0 40px #ff6b6b, 0 0 50px #ff6b6b;
-            }
-            100% {
-                text-shadow: 0 0 30px #6bffff, 0 0 40px #6bffff, 0 0 50px #6bffff, 0 0 60px #6bffff;
-            }
-        }
-
-        .fade-in {
-            animation: fadeIn 5s ease-in-out;
-        }
-
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-                transform: scale(0.8);
-            }
-            100% {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        .floating {
-            animation: float 6s infinite ease-in-out;
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-20px);
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dynamic Gen Z Website</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      background-color: #101010;
+    }
+    h1 {
+      color: #fff;
+      text-align: center;
+      font-size: 3em;
+      margin-top: 50px;
+    }
+    .section {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .section img {
+      width: 100%;
+      max-width: 800px;
+      transition: transform 1s ease;
+    }
+    .section:hover img {
+      transform: scale(1.1);
+    }
+    .dynamic-text {
+      color: #fff;
+      font-size: 2em;
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(-50%) scale(1);
+      }
+      50% {
+        transform: translateY(-60%) scale(1.1);
+      }
+    }
+    .button {
+      background-color: #FF4081;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 25px;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .button:hover {
+      background-color: #F50057;
+    }
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2em;
+      }
+      .dynamic-text {
+        font-size: 1.5em;
+      }
+    }
+  </style>
 </head>
 <body>
-    <h1 class="fade-in floating">GENZMIND.COM</h1>
+
+  <h1>Welcome to the Future</h1>
+  
+  <div class="section">
+    <img src="https://images.unsplash.com/photo-1579546929682-5da4265a5d74?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGNyZWF0aXZlJTIwbGFuZHNjb3BlfGVufDB8fHx8fDE2Nzc2Mjc5NjY&ixlib=rb-1.2.1&q=80&w=1080" alt="Creative Landscape">
+    <div class="dynamic-text">Explore New Horizons</div>
+  </div>
+
+  <div class="section">
+    <img src="https://images.unsplash.com/photo-1632428200989-1d3e6c1a3f5f?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDZ8fGZpc2hpb25hbCUyMGdyaWZmaXxlbnwwfHx8fDE2Nzc2Mjc5NzA&ixlib=rb-1.2.1&q=80&w=1080" alt="Innovative Technology">
+    <div class="dynamic-text">Innovative Trends</div>
+  </div>
+
+  <div class="section">
+    <img src="https://images.unsplash.com/photo-1603975314977-8e2e1d70ef8b?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGJlYXV0aWZ1bCUyMGZpc2hpb25hbCUyMHN0eWxlfGVufDB8fHx8fDE2Nzc2Mjc5NzE&ixlib=rb-1.2.1&q=80&w=1080" alt="Join the Movement">
+    <div class="dynamic-text">Join the Movement</div>
+  </div>
+
+  <div style="text-align: center; padding: 50px;">
+    <button class="button" onclick="alert('Welcome to Gen Z World!')">Start Your Journey</button>
+  </div>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('.section');
+      const scrollTop = window.scrollY;
+      sections.forEach((section, index) => {
+        const sectionOffset = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        const windowHeight = window.innerHeight;
+        
+        if (scrollTop > sectionOffset - windowHeight + 150 && scrollTop < sectionOffset + sectionHeight - 150) {
+          section.querySelector('img').style.transform = 'scale(1.1)';
+        } else {
+          section.querySelector('img').style.transform = 'scale(1)';
+        }
+      });
+    });
+  </script>
+
 </body>
 </html>
