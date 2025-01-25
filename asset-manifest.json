@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/genz/static/css/main.da438a05.css",
-    "main.js": "/genz/static/js/main.be79495e.js",
-    "index.html": "/genz/index.html",
-    "main.da438a05.css.map": "/genz/static/css/main.da438a05.css.map",
-    "main.be79495e.js.map": "/genz/static/js/main.be79495e.js.map"
+    "main.css": "/static/css/main.da438a05.css",
+    "main.js": "/static/js/main.be79495e.js",
+    "index.html": "/index.html",
+    "main.da438a05.css.map": "/static/css/main.da438a05.css.map",
+    "main.be79495e.js.map": "/static/js/main.be79495e.js.map"
   },
   "entrypoints": [
     "static/css/main.da438a05.css",
