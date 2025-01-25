@@ -4,118 +4,105 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Dynamic Gen Z Website</title>
+  <title>SUPRIYA AND RIDHAAN</title>
   <style>
-    body {
-      font-family: 'Arial', sans-serif;
+    /* Basic Reset */
+    * {
       margin: 0;
       padding: 0;
-      overflow-x: hidden;
-      background-color: #101010;
+      box-sizing: border-box;
     }
-    h1 {
-      color: #fff;
-      text-align: center;
-      font-size: 3em;
-      margin-top: 50px;
-    }
-    .section {
-      width: 100%;
-      height: 100vh;
+
+    /* Body and Background Setup */
+    body {
+      font-family: 'Arial', sans-serif;
       display: flex;
-      justify-content: center;
       align-items: center;
-      position: relative;
+      justify-content: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #FF4081, #F50057);
+      color: white;
       overflow: hidden;
     }
-    .section img {
-      width: 100%;
-      max-width: 800px;
-      transition: transform 1s ease;
-    }
-    .section:hover img {
-      transform: scale(1.1);
-    }
-    .dynamic-text {
-      color: #fff;
-      font-size: 2em;
+
+    /* Logo Styling */
+    .logo {
+      font-size: 4em;
+      font-weight: bold;
       text-align: center;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      animation: bounce 2s infinite;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      animation: logoAnimation 3s ease-in-out infinite;
     }
-    @keyframes bounce {
+
+    .logo span {
+      display: inline-block;
+      opacity: 0.7;
+      animation: colorChange 4s ease-in-out infinite;
+    }
+
+    /* Background Animation */
+    @keyframes logoAnimation {
       0%, 100% {
-        transform: translateY(-50%) scale(1);
+        transform: scale(1);
       }
       50% {
-        transform: translateY(-60%) scale(1.1);
+        transform: scale(1.2);
       }
     }
-    .button {
-      background-color: #FF4081;
-      padding: 15px 30px;
-      font-size: 1.2em;
-      border: none;
-      border-radius: 25px;
-      color: white;
-      cursor: pointer;
-      transition: background-color 0.3s;
+
+    @keyframes colorChange {
+      0% {
+        color: #FF4081;
+      }
+      50% {
+        color: #F50057;
+      }
+      100% {
+        color: #FF4081;
+      }
     }
+
+    /* Button Styling */
+    .button {
+      background-color: #FFF;
+      color: #F50057;
+      padding: 15px 30px;
+      font-size: 1.5em;
+      border: none;
+      border-radius: 50px;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
     .button:hover {
       background-color: #F50057;
+      color: white;
+      transform: translateY(-5px);
     }
+
+    /* Mobile Responsiveness */
     @media (max-width: 768px) {
-      h1 {
-        font-size: 2em;
+      .logo {
+        font-size: 2.5em;
       }
-      .dynamic-text {
-        font-size: 1.5em;
+      .button {
+        font-size: 1.2em;
       }
     }
+
   </style>
 </head>
 <body>
 
-  <h1>Welcome to the Future</h1>
-  
-  <div class="section">
-    <img src="https://images.unsplash.com/photo-1566257587-2457c6c5c2f6?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGZ1dHVyaXN0aWMlMjBjdWx0dXJlfGVufDB8fHx8fDE2Nzc2Mjg5NzU&ixlib=rb-1.2.1&q=80&w=1080" alt="Futuristic City">
-    <div class="dynamic-text">Explore the Future</div>
+  <!-- Logo Section -->
+  <div class="logo">
+    <span>SUPRIYA</span> & <span>RIDHAAN</span>
   </div>
 
-  <div class="section">
-    <img src="https://images.unsplash.com/photo-1593623972388-89be8c8f9c25?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGZ1dHVyaXN0aWMlMjB0ZWNobm9sb2d5fGVufDB8fHx8fDE2Nzc2Mjk1Nzg&ixlib=rb-1.2.1&q=80&w=1080" alt="Tech Landscape">
-    <div class="dynamic-text">Innovative Evolution</div>
-  </div>
-
-  <div class="section">
-    <img src="https://images.unsplash.com/photo-1555991068-0f1f8e4f3b0f?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDN8fGZ1dHVyaXN0aWMgY2FsbCUyMHNwYWNlfGVufDB8fHx8fDE2Nzc2Mjk3Nzg&ixlib=rb-1.2.1&q=80&w=1080" alt="Artificial Intelligence">
-    <div class="dynamic-text">AI at its Best</div>
-  </div>
-
-  <div style="text-align: center; padding: 50px;">
-    <button class="button" onclick="alert('Welcome to the Future of Gen Z!')">Start Your Journey</button>
-  </div>
-
-  <script>
-    window.addEventListener('scroll', () => {
-      const sections = document.querySelectorAll('.section');
-      const scrollTop = window.scrollY;
-      sections.forEach((section, index) => {
-        const sectionOffset = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        const windowHeight = window.innerHeight;
-        
-        if (scrollTop > sectionOffset - windowHeight + 150 && scrollTop < sectionOffset + sectionHeight - 150) {
-          section.querySelector('img').style.transform = 'scale(1.1)';
-        } else {
-          section.querySelector('img').style.transform = 'scale(1)';
-        }
-      });
-    });
-  </script>
+  <!-- Button Section -->
+  <button class="button" onclick="alert('Welcome to SUPRIYA AND RIDHAAN!')">Start Your Journey</button>
 
 </body>
 </html>
