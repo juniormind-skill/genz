@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Trending Memes & Hot Deals</title>
+  <title>Trending Memes & Deals</title>
   <style>
     /* Reset Styles */
     * {
@@ -21,62 +21,47 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      min-height: 100vh;
     }
 
     h1 {
-      font-size: 3rem;
+      font-size: 2.5em;
       color: white;
-      margin: 40px 0;
+      margin: 20px 0;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
       text-align: center;
-      text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.5);
-      letter-spacing: 2px;
     }
 
-    /* Main Section Styling */
-    .container {
-      width: 100%;
-      max-width: 1200px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    /* Component Styles */
+    /* Section Styles */
     .section {
       width: 100%;
-      margin-bottom: 40px;
-      background-color: white;
-      border-radius: 10px;
+      max-width: 1200px;
+      margin: 20px 0;
       padding: 20px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     .section h2 {
-      font-size: 2rem;
+      font-size: 1.8em;
       color: #FF6F61;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       text-align: center;
-      text-transform: uppercase;
     }
 
-    /* Memes Component */
+    /* Memes Section */
     .memes {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      justify-items: center;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
     }
 
     .meme {
-      background: #f8f8f8;
+      background: #f9f9f9;
       border: 1px solid #ddd;
       border-radius: 10px;
       overflow: hidden;
-      width: 100%;
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
       text-align: center;
-      transition: transform 0.3s ease-in-out;
     }
 
     .meme img {
@@ -85,105 +70,89 @@
     }
 
     .meme p {
-      font-size: 1rem;
-      padding: 12px;
-      font-weight: bold;
-      color: #333;
+      font-size: 1em;
+      padding: 10px;
     }
 
-    .meme:hover {
-      transform: translateY(-5px);
-    }
-
-    /* Deals Component */
+    /* Deals Section */
     .deals {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      gap: 15px;
     }
 
     .deal {
-      background: #f8f8f8;
+      background: #f9f9f9;
       border: 1px solid #ddd;
       border-radius: 10px;
+      padding: 15px;
       text-align: center;
-      padding: 20px;
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease-in-out;
     }
 
     .deal img {
       width: 100%;
-      max-width: 180px;
+      max-width: 150px;
       height: auto;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
 
     .deal h3 {
-      font-size: 1.2rem;
+      font-size: 1.2em;
       color: #333;
     }
 
     .deal p {
-      font-size: 1rem;
+      font-size: 1em;
       margin: 10px 0;
     }
 
     .deal button {
-      background-color: #FF6F61;
+      background: #FF6F61;
       color: white;
       border: none;
-      padding: 12px 24px;
-      font-size: 1rem;
+      padding: 10px 20px;
+      font-size: 1em;
       border-radius: 5px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      transition: background 0.3s;
     }
 
     .deal button:hover {
-      background-color: #FF4C3B;
+      background: #FF4C3B;
     }
 
-    .deal:hover {
-      transform: translateY(-5px);
-    }
-
-    /* AI Joke Component */
+    /* AI Section */
     .ai-fun {
       text-align: center;
-      margin-top: 20px;
     }
 
     .ai-button {
-      background-color: #FF6F61;
+      background: #FF6F61;
       color: white;
       border: none;
-      padding: 12px 24px;
-      font-size: 1rem;
+      padding: 10px 20px;
+      font-size: 1em;
       border-radius: 5px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      transition: background 0.3s;
+      margin-top: 10px;
     }
 
     .ai-button:hover {
-      background-color: #FF4C3B;
+      background: #FF4C3B;
     }
 
     .joke {
-      margin-top: 15px;
-      font-size: 1.2rem;
+      margin-top: 20px;
+      font-size: 1.2em;
       font-style: italic;
       color: #333;
     }
 
-    /* Responsive Design */
+    /* Mobile Responsiveness */
     @media (max-width: 768px) {
-      .container {
-        padding: 10px;
-      }
-
       h1 {
-        font-size: 2.5rem;
+        font-size: 2em;
       }
 
       .deal {
@@ -194,98 +163,96 @@
 </head>
 <body>
 
-<!-- Main Container -->
-<div class="container">
-  <h1>Trending Memes & Hot Deals</h1>
+<!-- Header -->
+<h1>Trending Memes & Hot Deals</h1>
 
-  <!-- AI Joke Section -->
-  <div class="section">
-    <h2>Get a Laugh with AI</h2>
-    <div class="ai-fun">
-      <p>Click the button below to generate a fun AI-powered joke!</p>
-      <button class="ai-button" id="generate-joke">Generate Joke</button>
-      <div class="joke" id="joke-output">Your joke will appear here...</div>
+<!-- AI Section -->
+<div class="section">
+  <h2>Get a Laugh with AI</h2>
+  <div class="ai-fun">
+    <p>Click the button below to generate a fun AI-powered joke!</p>
+    <button class="ai-button" id="generate-joke">Generate Joke</button>
+    <div class="joke" id="joke-output">Your joke will appear here...</div>
+  </div>
+</div>
+
+<!-- Trending Memes Section -->
+<div class="section">
+  <h2>Trending Memes</h2>
+  <div class="memes" id="memes">
+    <!-- Meme Images with Placeholder -->
+    <div class="meme">
+      <img src="https://via.placeholder.com/300x200.png?text=Meme+1" alt="Meme 1">
+      <p>"Random Meme 1"</p>
+    </div>
+    <div class="meme">
+      <img src="https://via.placeholder.com/300x200.png?text=Meme+2" alt="Meme 2">
+      <p>"Random Meme 2"</p>
+    </div>
+    <div class="meme">
+      <img src="https://via.placeholder.com/300x200.png?text=Meme+3" alt="Meme 3">
+      <p>"Random Meme 3"</p>
+    </div>
+    <div class="meme">
+      <img src="https://via.placeholder.com/300x200.png?text=Meme+4" alt="Meme 4">
+      <p>"Random Meme 4"</p>
     </div>
   </div>
+</div>
 
-  <!-- Trending Memes Section -->
-  <div class="section">
-    <h2>Trending Memes</h2>
-    <div class="memes" id="memes">
-      <!-- Meme Images with Placeholder -->
-      <div class="meme">
-        <img src="https://via.placeholder.com/300x200.png?text=Meme+1" alt="Meme 1">
-        <p>"Random Meme 1"</p>
-      </div>
-      <div class="meme">
-        <img src="https://via.placeholder.com/300x200.png?text=Meme+2" alt="Meme 2">
-        <p>"Random Meme 2"</p>
-      </div>
-      <div class="meme">
-        <img src="https://via.placeholder.com/300x200.png?text=Meme+3" alt="Meme 3">
-        <p>"Random Meme 3"</p>
-      </div>
-      <div class="meme">
-        <img src="https://via.placeholder.com/300x200.png?text=Meme+4" alt="Meme 4">
-        <p>"Random Meme 4"</p>
-      </div>
+<!-- Hot Deals Section -->
+<div class="section">
+  <h2>Hot Deals</h2>
+  <div class="deals">
+    <div class="deal">
+      <img src="https://via.placeholder.com/150.png?text=Deal+1" alt="Deal 1">
+      <h3>Wireless Earbuds</h3>
+      <p>Only $29.99! Limited Time Offer.</p>
+      <button>Shop Now</button>
     </div>
-  </div>
-
-  <!-- Hot Deals Section -->
-  <div class="section">
-    <h2>Hot Deals</h2>
-    <div class="deals">
-      <div class="deal">
-        <img src="https://via.placeholder.com/150.png?text=Deal+1" alt="Deal 1">
-        <h3>Wireless Earbuds</h3>
-        <p>Only $29.99! Limited Time Offer.</p>
-        <button>Shop Now</button>
-      </div>
-      <div class="deal">
-        <img src="https://via.placeholder.com/150.png?text=Deal+2" alt="Deal 2">
-        <h3>Gaming Keyboard</h3>
-        <p>Save 40%! Get it for $59.99.</p>
-        <button>Shop Now</button>
-      </div>
-      <div class="deal">
-        <img src="https://via.placeholder.com/150.png?text=Deal+3" alt="Deal 3">
-        <h3>Graphic T-Shirts</h3>
-        <p>Buy 1, Get 1 Free!</p>
-        <button>Shop Now</button>
-      </div>
-      <div class="deal">
-        <img src="https://via.placeholder.com/150.png?text=Deal+4" alt="Deal 4">
-        <h3>Smart Watch</h3>
-        <p>Flat 50% Off! Just $99.99.</p>
-        <button>Shop Now</button>
-      </div>
+    <div class="deal">
+      <img src="https://via.placeholder.com/150.png?text=Deal+2" alt="Deal 2">
+      <h3>Gaming Keyboard</h3>
+      <p>Save 40%! Get it for $59.99.</p>
+      <button>Shop Now</button>
+    </div>
+    <div class="deal">
+      <img src="https://via.placeholder.com/150.png?text=Deal+3" alt="Deal 3">
+      <h3>Graphic T-Shirts</h3>
+      <p>Buy 1, Get 1 Free!</p>
+      <button>Shop Now</button>
+    </div>
+    <div class="deal">
+      <img src="https://via.placeholder.com/150.png?text=Deal+4" alt="Deal 4">
+      <h3>Smart Watch</h3>
+      <p>Flat 50% Off! Just $99.99.</p>
+      <button>Shop Now</button>
     </div>
   </div>
 </div>
 
 <script>
-  // Function to fetch AI-generated jokes
-  async function fetchJoke() {
-    const jokeOutput = document.getElementById('joke-output');
-    jokeOutput.textContent = "Fetching a joke...";
+    // Function to fetch AI-generated jokes
+    async function fetchJoke() {
+      const jokeOutput = document.getElementById('joke-output');
+      jokeOutput.textContent = "Fetching a joke...";
 
-    try {
-      const response = await fetch('https://v2.jokeapi.dev/joke/Any?safe-mode');
-      const data = await response.json();
+      try {
+        const response = await fetch('https://v2.jokeapi.dev/joke/Any?safe-mode');
+        const data = await response.json();
 
-      if (data.type === 'single') {
-        jokeOutput.textContent = data.joke;
-      } else {
-        jokeOutput.textContent = `${data.setup} - ${data.delivery}`;
+        if (data.type === 'single') {
+          jokeOutput.textContent = data.joke;
+        } else {
+          jokeOutput.textContent = `${data.setup} - ${data.delivery}`;
+        }
+      } catch (error) {
+        jokeOutput.textContent = "Oops! Couldn't fetch a joke. Try again later.";
+        console.error(error);
       }
-    } catch (error) {
-      jokeOutput.textContent = "Oops! Couldn't fetch a joke. Try again later.";
-      console.error(error);
     }
-  }
 
-  document.getElementById('generate-joke').addEventListener('click', fetchJoke);
+    document.getElementById('generate-joke').addEventListener('click', fetchJoke);
 </script>
 
 </body>
