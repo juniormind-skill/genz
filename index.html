@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GENZMIND.COM</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(45deg, #ff6b6b, #ff9b6b, #ffd56b, #6bff6b, #6bffff, #6b6bff, #ff6bff);
+            background-size: 400% 400%;
+            animation: gradientBackground 10s ease infinite;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        @keyframes gradientBackground {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        h1 {
+            font-size: 6rem;
+            background: linear-gradient(90deg, #ff6b6b, #ff9b6b, #ffd56b, #6bff6b, #6bffff, #6b6bff, #ff6bff);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            text-shadow: 4px 4px 20px rgba(0, 0, 0, 0.7);
+            animation: textGlow 3s infinite alternate;
+        }
+
+        @keyframes textGlow {
+            0% {
+                text-shadow: 0 0 20px #ff6b6b, 0 0 30px #ff6b6b, 0 0 40px #ff6b6b, 0 0 50px #ff6b6b;
+            }
+            100% {
+                text-shadow: 0 0 30px #6bffff, 0 0 40px #6bffff, 0 0 50px #6bffff, 0 0 60px #6bffff;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .floating {
+            animation: float 6s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="fade-in floating">GENZMIND.COM</h1>
+</body>
+</html>
