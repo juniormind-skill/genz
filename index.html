@@ -4,146 +4,258 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>WELCOME TO GEN Z WORLD</title>
+  <title>Trending Memes & Deals</title>
   <style>
-    /* Basic Reset */
+    /* Reset Styles */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    /* Body and Background Setup */
     body {
       font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #FF6F61, #FFD700);
+      color: #333;
+      padding: 20px;
       display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      background: linear-gradient(135deg, #FF4081, #F50057);
-      color: white;
-      overflow: hidden;
       flex-direction: column;
+      align-items: center;
     }
 
-    /* Slogan Styling */
-    .slogan {
-      font-size: 3em;
-      font-weight: bold;
+    h1 {
+      font-size: 2.5em;
+      color: white;
+      margin: 20px 0;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
       text-align: center;
-      text-transform: uppercase;
-      letter-spacing: 5px;
-      animation: logoAnimation 3s ease-in-out infinite;
-      color: #FFFFFF; /* Text color set to white */
-      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8); /* Adding a shadow for contrast */
     }
 
-    .sub-slogan {
-      font-size: 1.5em;
-      font-weight: normal;
-      color: #FFFFFF;
-      margin-top: 10px;
+    /* Section Styles */
+    .section {
+      width: 100%;
+      max-width: 1200px;
+      margin: 20px 0;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     }
 
-    /* Animation for Slogan */
-    @keyframes logoAnimation {
-      0%, 100% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.2);
-      }
+    .section h2 {
+      font-size: 1.8em;
+      color: #FF6F61;
+      margin-bottom: 15px;
+      text-align: center;
     }
 
-    /* Quote Section Styling */
-    .quotes {
+    /* Memes Section */
+    .memes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+
+    .meme {
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .meme img {
+      width: 100%;
+      height: auto;
+    }
+
+    .meme p {
+      font-size: 1em;
+      padding: 10px;
+    }
+
+    /* Deals Section */
+    .deals {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+
+    .deal {
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .deal img {
+      width: 100%;
+      max-width: 150px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .deal h3 {
       font-size: 1.2em;
-      font-style: italic;
-      color: #FFFFFF;
-      margin-top: 30px;
-      text-align: center;
-      padding: 0 20px;
-      animation: fadeIn 5s ease-in-out infinite;
+      color: #333;
     }
 
-    .quotes p {
+    .deal p {
+      font-size: 1em;
       margin: 10px 0;
     }
 
-    /* Button Styling */
-    .button {
-      background-color: #FFF;
-      color: #F50057;
-      padding: 15px 30px;
-      font-size: 1.5em;
+    .deal button {
+      background: #FF6F61;
+      color: white;
       border: none;
-      border-radius: 50px;
-      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1em;
+      border-radius: 5px;
       cursor: pointer;
-      transition: all 0.3s ease;
+      transition: background 0.3s;
     }
 
-    .button:hover {
-      background-color: #F50057;
+    .deal button:hover {
+      background: #FF4C3B;
+    }
+
+    /* AI Section */
+    .ai-fun {
+      text-align: center;
+    }
+
+    .ai-button {
+      background: #FF6F61;
       color: white;
-      transform: translateY(-5px);
+      border: none;
+      padding: 10px 20px;
+      font-size: 1em;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+      margin-top: 10px;
+    }
+
+    .ai-button:hover {
+      background: #FF4C3B;
+    }
+
+    .joke {
+      margin-top: 20px;
+      font-size: 1.2em;
+      font-style: italic;
+      color: #333;
     }
 
     /* Mobile Responsiveness */
     @media (max-width: 768px) {
-      .slogan {
+      h1 {
         font-size: 2em;
-        padding: 10px;
       }
-      .sub-slogan {
-        font-size: 1.2em;
-      }
-      .quotes {
-        font-size: 1em;
-      }
-      .button {
-        font-size: 1.2em;
-        padding: 12px 24px;
+
+      .deal {
+        flex: 1 1 100%;
       }
     }
-
-    /* Animation for Quotes */
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-      }
-      50% {
-        opacity: 1;
-      }
-      100% {
-        opacity: 0;
-      }
-    }
-
   </style>
 </head>
 <body>
 
-  <!-- Slogan Section -->
-  <div class="slogan">
-   Welcome to GENZMIND.COM
-  </div>
+<!-- Header -->
+<h1>Trending Memes & Hot Deals</h1>
 
-  <!-- Sub Slogan Section -->
-  <div class="sub-slogan">
-    The Future Begins Now
+<!-- AI Section -->
+<div class="section">
+  <h2>Get a Laugh with AI</h2>
+  <div class="ai-fun">
+    <p>Click the button below to generate a fun AI-powered joke!</p>
+    <button class="ai-button" id="generate-joke">Generate Joke</button>
+    <div class="joke" id="joke-output">Your joke will appear here...</div>
   </div>
+</div>
 
-  <!-- Quotes Section -->
-  <div class="quotes">
-    <p>"Your time is now, make it count."</p>
-    <p>"The best way to predict the future is to create it." – Abraham Lincoln</p>
-    <p>"Don't wait for opportunity. Create it."</p>
-    <p>"The world is yours for the taking."</p>
+<!-- Trending Memes Section -->
+<div class="section">
+  <h2>Trending Memes</h2>
+  <div class="memes">
+    <div class="meme">
+      <img src="https://via.placeholder.com/300x200.png?text=Meme+1" alt="Meme 1">
+      <p>"When Monday hits you hard!"</p>
+    </div>
+    <div class="meme">
+      <img src="https://via.placeholder.com/300x200.png?text=Meme+2" alt="Meme 2">
+      <p>"Gen Z trying to explain crypto."</p>
+    </div>
+    <div class="meme">
+      <img src="https://via.placeholder.com/300x200.png?text=Meme+3" alt="Meme 3">
+      <p>"Me waiting for my food delivery."</p>
+    </div>
+    <div class="meme">
+      <img src="https://via.placeholder.com/300x200.png?text=Meme+4" alt="Meme 4">
+      <p>"Every Gen Z after 1 hour of work."</p>
+    </div>
   </div>
+</div>
 
-  <!-- Button Section -->
-  <button class="button" onclick="alert('Welcome to GEN Z WORLD!')">Start Your Journey</button>
+<!-- Hot Deals Section -->
+<div class="section">
+  <h2>Hot Deals</h2>
+  <div class="deals">
+    <div class="deal">
+      <img src="https://via.placeholder.com/150.png?text=Deal+1" alt="Deal 1">
+      <h3>Wireless Earbuds</h3>
+      <p>Only $29.99! Limited Time Offer.</p>
+      <button>Shop Now</button>
+    </div>
+    <div class="deal">
+      <img src="https://via.placeholder.com/150.png?text=Deal+2" alt="Deal 2">
+      <h3>Gaming Keyboard</h3>
+      <p>Save 40%! Get it for $59.99.</p>
+      <button>Shop Now</button>
+    </div>
+    <div class="deal">
+      <img src="https://via.placeholder.com/150.png?text=Deal+3" alt="Deal 3">
+      <h3>Graphic T-Shirts</h3>
+      <p>Buy 1, Get 1 Free!</p>
+      <button>Shop Now</button>
+    </div>
+    <div class="deal">
+      <img src="https://via.placeholder.com/150.png?text=Deal+4" alt="Deal 4">
+      <h3>Smart Watch</h3>
+      <p>Flat 50% Off! Just $99.99.</p>
+      <button>Shop Now</button>
+    </div>
+  </div>
+</div>
+
+<script>
+    // Function to fetch AI-generated jokes
+    async function fetchJoke() {
+      const jokeOutput = document.getElementById('joke-output');
+      jokeOutput.textContent = "Fetching a joke...";
+
+      try {
+        // Example of an AI-related API request (replace with actual API)
+        const response = await fetch('https://v2.jokeapi.dev/joke/Any?safe-mode'); // Example API
+        const data = await response.json();
+
+        // Display the joke
+        if (data.type === 'single') {
+          jokeOutput.textContent = data.joke;
+        } else {
+          jokeOutput.textContent = ${data.setup} - ${data.delivery};
+        }
+      } catch (error) {
+        jokeOutput.textContent = "Oops! Couldn't fetch a joke. Try again later.";
+        console.error(error);
+      }
+    }
+
+    // Attach event listener to the button
+    document.getElementById('generate-joke').addEventListener('click', fetchJoke);
+  </script>
 
 </body>
 </html>
